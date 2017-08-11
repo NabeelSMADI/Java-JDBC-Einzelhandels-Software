@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="493.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Kunden">
+   <children>
+      <TableView fx:id="tableview" layoutX="373.0" layoutY="46.0" onMouseClicked="#selectRow" prefHeight="449.0" prefWidth="785.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="373.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+        <columns>
+          <TableColumn fx:id="kundenID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="kundenName" prefWidth="126.0" text="Name" />
+            <TableColumn fx:id="tel" prefWidth="144.0" text="Telefon" />
+            <TableColumn fx:id="email" prefWidth="182.0" text="Email" />
+            <TableColumn fx:id="adress" prefWidth="256.0" text="Adress" />
+        </columns>
+      </TableView>
+      <Button fx:id="close" layoutX="298.0" layoutY="444.0" mnemonicParsing="false" onAction="#exit" prefHeight="31.0" prefWidth="69.0" text="Close" />
+      <ToolBar layoutY="3.0" prefHeight="40.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <items>
+            <ImageView fx:id="firstBt" fitHeight="31.0" fitWidth="34.0" onMouseClicked="#first" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/First.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pBt" fitHeight="31.0" fitWidth="34.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#pre" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/P.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="numText" editable="false" prefHeight="31.0" prefWidth="45.0" />
+            <ImageView fx:id="nBt" fitHeight="31.0" fitWidth="34.0" layoutX="49.0" layoutY="10.0" onMouseClicked="#next" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/N.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="lastBt" fitHeight="31.0" fitWidth="34.0" layoutX="88.0" layoutY="10.0" onMouseClicked="#last" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Last.png" />
+               </image>
+            </ImageView>
+         </items>
+      </ToolBar>
+      <TextField fx:id="IDtext" layoutX="89.0" layoutY="70.0" prefHeight="31.0" prefWidth="169.0" />
+      <Label layoutX="44.0" layoutY="75.0" text="ID" />
+      <Button fx:id="addBt" layoutX="24.0" layoutY="444.0" mnemonicParsing="false" onAction="#add" prefHeight="31.0" prefWidth="58.0" text="add" />
+      <Button fx:id="editBt" layoutX="92.0" layoutY="444.0" mnemonicParsing="false" onAction="#edit" prefHeight="31.0" prefWidth="58.0" text="Edit" />
+      <Button fx:id="newBt" layoutX="156.0" layoutY="444.0" mnemonicParsing="false" onAction="#newUser" prefHeight="31.0" prefWidth="58.0" text="New" />
+      <Button fx:id="delBt" layoutX="219.0" layoutY="444.0" mnemonicParsing="false" onAction="#del" prefHeight="31.0" prefWidth="69.0" text="Delete" />
+      <TextField fx:id="nameText" layoutX="89.0" layoutY="114.0" prefHeight="31.0" prefWidth="169.0" />
+      <Label layoutX="39.0" layoutY="119.0" text="Name" />
+      <TextField fx:id="telText" layoutX="89.0" layoutY="159.0" prefHeight="31.0" prefWidth="169.0" />
+      <Label layoutX="34.0" layoutY="166.0" text="Telefon" />
+      <TextField fx:id="emailText" layoutX="89.0" layoutY="209.0" prefHeight="31.0" prefWidth="169.0" />
+      <Label layoutX="34.0" layoutY="214.0" text="Email" />
+      <Label layoutX="30.0" layoutY="275.0" text="Adress" />
+      <TextArea fx:id="adressText" layoutX="89.0" layoutY="268.0" prefHeight="155.0" prefWidth="267.0" />
+   </children>
+</AnchorPane>
